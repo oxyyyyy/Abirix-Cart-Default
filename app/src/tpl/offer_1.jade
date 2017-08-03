@@ -1,0 +1,91 @@
+doctype html
+html(lang="#{common[0].current_lang}")
+	include include/head.jade
+	body(class="lang_#{common[0].current_lang} page_cart")
+		.product_container.no_padding_bottom
+			.discount
+				.container
+					| <span>#{common[0].discount[0].discount_2[0]}</span> #{common[0].discount[0].discount_2[1]} <span class="icon icon_car">#{common[0].discount[0].discount_2[2]}</span> #{common[0].discount[0].discount_2[3]}
+			include include/top_line.jade
+			.order_container
+				.container
+					include include/info_line.jade
+					.row
+						.col-lg-8.costume_padding.content_side
+							.title_container
+								span #{common[0].order_offer_title[0]}
+							ul.offers_list
+								li.selected
+									.offer_header
+										.title #{common[0].offer_1_list[0].offer_1[0]} 
+											span #{common[0].offer_1_list[0].offer_1[1]}
+										.shipping_info
+											| #{common[0].offer_1_list[0].offer_1[2]}
+											span #{common[0].offer_1_list[0].offer_1[3]}
+									.offer_middle
+										.image
+											img(src="img/common/product/offer_1/product_1.png", alt="")
+											.checkbox
+											.icon.get_2_free
+										.price_container
+											.old_price #{common[0].offer_1_list[0].common[0]}
+												span #{common[0].offer_1_list[0].offer_1[4]}
+											.price #{common[0].offer_1_list[0].offer_1[5]}
+												span #{common[0].offer_1_list[0].common[1]} <br> #{common[0].offer_1_list[0].common[2]}
+									.offer_footer
+										.special #{common[0].offer_1_list[0].common[3]}
+										.select
+											| #{common[0].offer_1_list[0].common[4]}
+											span
+								li
+									.offer_header
+										.title #{common[0].offer_1_list[0].offer_2[0]}
+											span #{common[0].offer_1_list[0].offer_2[1]}
+										.shipping_info
+											| #{common[0].offer_1_list[0].offer_2[2]}
+											span #{common[0].offer_1_list[0].offer_2[3]}
+									.offer_middle
+										.image
+											img(src="img/common/product/offer_1/product_2.png", alt="")
+											.checkbox
+											.icon.get_1_free
+										.price_container
+											.old_price #{common[0].offer_1_list[0].common[0]}
+												span #{common[0].offer_1_list[0].offer_2[4]}
+											.price #{common[0].offer_1_list[0].offer_2[5]}
+												span #{common[0].offer_1_list[0].common[1]} <br> #{common[0].offer_1_list[0].common[2]}
+									.offer_footer
+										.select
+											| #{common[0].offer_1_list[0].common[4]}
+											span
+								li.no_image
+									.offer_header
+										.title #{common[0].offer_1_list[0].offer_3[0]}
+										.shipping_info
+											| #{common[0].offer_1_list[0].offer_3[1]}
+									.offer_middle
+										.image
+											img(src="img/common/product/offer_1/product_3.png", alt="")
+											.checkbox
+										.text
+											| #{common[0].offer_1_list[0].offer_3[2]} <br> #{common[0].offer_1_list[0].offer_3[3]}
+										.price_container
+											.price #{common[0].offer_1_list[0].offer_3[4]}
+												span #{common[0].offer_1_list[0].common[1]} <br> #{common[0].offer_1_list[0].common[2]}
+									.offer_footer
+										.select
+											| #{common[0].offer_1_list[0].common[4]}
+											span
+							include include/garant.jade
+						.col-lg-4.costume_padding.sidebar_side
+							.title_container
+								span #{common[0].order_title[0]}
+								i #{common[0].order_title[1]}
+							include include/order_form.jade
+		include include/video.jade
+		#step_3.popup.step_link
+			.close_container
+			.popup_container
+				a(href="offer_2.html")
+					img(src="img/lang_#{common[0].current_lang}/popup_3.png", alt="")
+		include include/footer.jade

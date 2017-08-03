@@ -1,0 +1,2108 @@
+body
+	&.scroll_lock
+		position: fixed
+		overflow-x: hidden
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding-right: 17px
+		-webkit-tap-highlight-color: none
+
+
+//Warning
+.warning
+	border: 1px solid black
+	position: relative
+	padding-top: 10px
+	padding-bottom: 10px
+	padding-left: 15px
+	padding-right: 30px
+	margin-bottom: 15px
+	margin-top: 15px
+	display: flex
+	align-items: center
+	&:before
+		content: '';
+		display: block
+		@include sprite($icon-alert)
+		flex: 0 0 auto;
+		margin-right: 15px
+	.close
+		cursor: pointer
+		position: absolute
+		right: 10px
+		top: 10px
+		@include sprite($icon-close)
+
+
+//Footer
+footer
+	margin-top: 30px
+	padding-bottom: 140px
+	.top_line
+		border-bottom: 1px solid #DFE5EC
+		padding-bottom: 30px
+		margin-bottom: 30px
+		.name
+			strong
+				font-size: 18px
+			@media (max-width: $size_sm)
+				text-align: center
+				margin-bottom: 15px
+		.footer_menu
+			display: flex
+			justify-content: flex-end
+			@media (max-width: $size_sm)
+				justify-content: center
+			li
+				margin-left: 15px
+				@media (max-width: $size_sm)
+					margin-left: 5px
+					margin-right: 5px
+					font-size: 12px
+				a
+					&:hover
+						text-decoration: none
+	.footer_warning
+		margin-bottom: 30px
+		strong
+			font-size: 16px
+	.copyright
+		font-size: 12px
+	.logo_list
+		margin-top: -10px
+		display: flex
+		align-items: flex-end
+		justify-content: flex-end
+		@media (max-width: $size_xs)
+			flex-flow: column nowrap
+			justify-content: center
+			align-items: center
+		@media (max-width: $size_sm)
+			justify-content: center
+			margin-top: 30px
+
+		span
+			margin-left: 10px
+			@media (max-width: $size_xs)
+				margin-bottom: 10px
+				margin-left: 0
+			&.item_1
+				@include sprite($icon-footer-logo-1)
+			&.item_2
+				@include sprite($icon-footer-logo-2)
+			&.item_3
+				@include sprite($icon-footer-logo-3)
+			&.item_4
+				@include sprite($icon-footer-logo-4)
+
+
+//Fixed Buttons
+.fixed_buysafe
+	@include sprite($icon-buysafe)
+	position: fixed
+	left: 0
+	bottom: 0
+	z-index: 3
+	@media (max-width: $size_xs)
+		display: none
+.fixed_doctor
+	@include sprite($icon-doctor)
+	position: fixed
+	right: 0
+	bottom: 0
+	z-index: 3
+	@media (max-width: $size_xs)
+		display: none
+
+
+//Popups
+.popup
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 9999
+	background: rgba(0,0,0,0.7)
+	display: flex
+	display: none
+	overflow-x: hidden
+	overflow-y: auto
+	font-family: 'Roboto Condensed', sans-serif;
+	&.step_link
+		.popup_container
+			background: none
+			padding: 0
+			img
+				width: 100%
+				height: auto
+	&#page_terms
+		display: none
+	&#page_privacy
+		display: none
+	&#page_contact
+		display: none
+		.popup_container
+			.scroll_container
+				p
+					margin-bottom: 4px
+	&#doctor
+		padding-left: 33px
+		padding-right: 33px
+		@media (max-width: $size_xs)
+			padding-left: 10px
+			padding-right: 10px
+		.popup_container
+			background-image: linear-gradient(to top, white 0%, #ccc 71%, #ccc 100%);
+			border-radius: 10px;
+			.doctor_sertificate
+				position: relative
+				margin-top: 27px
+				.bg
+					position: absolute
+					top: -5px
+					width: 98%
+					left: 0.5%
+					z-index: 1
+					height: 100%
+					transform: skewY(-0.3deg)
+					background-color: #fbfbfb;
+					background-image: linear-gradient(to top, transparent 0%, transparent 100%);
+					border: 1px solid rgba(0, 0, 0, 0.1);
+					box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), inset 0 2px 0 white, inset 0 0 5px white;
+				.text
+					font-size: 18px
+					background-color: white
+					font-weight: 400
+					color: #4f4f4f
+					border: 1px solid rgba(0, 0, 0, 0.1)
+					box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), inset 0 2px 0 white, inset 0 0 5px white
+					padding-left: 50px
+					padding-right: 50px
+					padding-top: 50px
+					margin-bottom: -10px
+					padding-bottom: 50px
+					position: relative
+					z-index: 2
+					@media (max-width: $size_xs)
+						padding-left: 30px
+						padding-right: 30px
+						font-size: 14px
+						padding-top: 20px
+						p
+							margin-bottom: 10px
+					&:after
+						content: ''
+						position: absolute
+						right: 62px;
+						bottom: -13px;
+						@include sprite($icon-doctor-avtograf)
+						@media (max-width: $size_xs)
+							opacity: 0.5
+							right: 0
+							bottom: 0
+					&:before
+						content: ''
+						position: absolute
+						left: 10px
+						top: -12px
+						@include sprite($icon-screpka)
+					h4
+						text-align: center
+						font-size: 24px
+						margin-bottom: 18px
+						color: #4f4f4f
+						@media (max-width: $size_xs)
+							font-size: 18px
+					small
+						display: block
+						font-size: 14px
+						font-weight: 300
+		.doctor_head
+			display: flex
+			justify-content: flex-end
+			min-height: 99px
+			position: relative
+			margin-top: -10px
+			padding-right: 20px
+			&:before
+				content: ''
+				position: absolute
+				left: -33px
+				top: 0
+				@include sprite($icon-doctor-bg)
+			.logo_list
+				display: flex
+				align-items: center
+				@media (max-width: $size_xs)
+					display: none
+				span
+					margin-left: 7px
+					&.item_1
+						@include sprite($icon-doctor-logo-1)
+					&.item_2
+						@include sprite($icon-doctor-logo-2)
+					&.item_3
+						@include sprite($icon-doctor-logo-3)
+			.doctor_image
+				@include sprite($icon-doctor-popup)
+				height: 119px
+				margin-top: -20px
+				@media (max-width: $size_xs)
+					margin-right: -20px
+		.scroll_container
+			padding-left: 30px
+			padding-right: 30px
+			padding-bottom: 0
+			overflow: hidden
+		.container_name
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.name
+				flex: 1 1 auto
+				padding-right: 10px
+				display: flex
+				align-items: center
+				padding-top: 4px
+				strong
+					margin-right: 30px
+					font-size: 24px
+					margin-top: -3px
+				span
+					@media (max-width: $size_xs)
+						display: none
+			.close_btn
+				flex: 0 0 auto
+	&#step_1
+		display: none
+	.close_container
+		position: fixed
+		left: 0
+		top: 0
+		width: 100%
+		min-height: 100%
+		z-index: 2
+		cursor: pointer
+	.popup_container
+		max-width: 775px
+		background: #fff
+		transition: 0.5s all
+		position: relative
+		margin: auto
+		z-index: 3
+		padding-left: 10px
+		padding-right: 10px
+		padding-top: 10px
+		padding-bottom: 12px
+		border-radius: 10px
+		min-width: 290px
+		.close
+			position: absolute
+			right: 12px
+			top: 12px
+			@include sprite($icon-close)
+			cursor: pointer
+			z-index: 5
+		.close_btn
+			height: 24px;
+			background: #f9f9f9;
+			background: -moz-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%)
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #e8e8e8))
+			background: -webkit-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%)
+			background: -o-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%)
+			background: -ms-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%)
+			background: linear-gradient(to bottom, #f9f9f9 0%, #e8e8e8 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#e8e8e8', GradientType=0 )
+			border: 1px solid rgba(171, 180, 190, 0.5);
+			box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(255, 255, 255, 0.45);
+			text-decoration: none
+			text-shadow: 0 1px 1px white;
+			color: #666;
+			font-size: 14px;
+			font-weight: 400;
+			float: right
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			padding-left: 14px
+			padding-right: 14px
+			border-radius: 20px
+			padding-top: 1px
+			&:before
+				content: ''
+				margin-right: 5px
+				margin-top: -1px
+				@include sprite($icon-close)
+		.title
+			text-transform: uppercase
+			color: #8b8b8d
+			margin-bottom: 15px
+			display: flex
+			align-items: center
+			padding-left: 10px
+			font-size: 16px
+			padding-right: 15px
+			padding-top: 2px
+			strong
+				color: #000
+				font-size: 24px
+				margin-right: 12px
+				margin-top: -2px
+		.scroll_container
+			background-color: #F7F7F7
+			border-radius: 3px
+			padding-left: 10px
+			padding-right: 10px
+			padding-top: 15px
+			padding-bottom: 15px
+			max-height: 465px
+			overflow: auto
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.34)
+			font-size: 14px
+			color: #4f4f4f
+			font-weight: 300
+			margin-bottom: 10px
+			.phone
+				background-color: white;
+				background-image: linear-gradient(to top, #f7f7f7 0%, rgba(255, 255, 255, 0.69) 100%, rgba(255, 255, 255, 0.69) 100%);
+				border: 1px solid rgba(122, 163, 209, 0.33);
+				box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.4);
+				border-radius: 3px;
+				padding-left: 3px
+				padding-right: 4px
+				text-decoration: none
+				color: #3a3a3a
+				display: inline-flex
+				font-weight: 400
+				font-size: 14px
+				height: 18px
+				line-height: 16px
+				margin-left: 5px
+				margin-top: 1px
+				padding-top: 1px
+				span
+					font-weight: 700
+					margin-right: 7px
+					height: 100%
+					display: flex
+					align-items: center
+					justify-content: center
+					&:before
+						content: ''
+						margin-right: 4px
+						@include sprite($icon-flag)
+			a
+				color: #0e19ff
+				&:hover
+					text-decoration: none
+			h4
+				color: #8b8b8d
+				margin-bottom: 12px
+				font-weight: 700
+				font-size: 18px
+				text-transform: uppercase
+			ul
+				margin-top: 10px
+				margin-bottom: 10px
+				font-weight: 400
+				padding-left: 12px
+				li
+					margin-bottom: 10px
+					display: flex
+					&:before
+						content: ''
+						display: inline-block
+						vertical-align: top
+						width: 4px;
+						height: 4px;
+						border-radius: 10px
+						margin-top: 6px
+						margin-right: 6px
+						border: 1px solid #44474f;
+					&:last-child
+						margin-bottom: 0
+			p
+				margin-bottom: 20px
+				&.regular
+					font-weight: 400
+				&:last-child
+					margin-bottom: 0
+//Inputs
+input, select, textarea
+	font-family: 'Roboto Condensed', sans-serif;
+//Buttons
+.button
+	display: inline-flex
+	@include sprite($icon-button-next)
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-left: 19px
+	padding-right: 70px
+	display: flex
+	align-items: center
+	overflow: hidden
+	text-decoration: none
+	span
+		transform: skewX(-8deg)
+		color: white;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 22px;
+		text-transform: uppercase;
+		i
+			display: block
+			color: #fdf18d;
+			font-size: 12px;
+			text-transform: none
+			font-weight: 400
+			transform: skewX(4deg)
+			line-height: 12px;
+	&.rush
+		padding-left: 24px
+		//@include sprite($icon-button-rush)
+		background: #ff4800;
+		background: -moz-linear-gradient(top, #ff4800 0%, #ef2c00 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, #ff4800), color-stop(100%, #ef2c00));
+		background: -webkit-linear-gradient(top, #ff4800 0%, #ef2c00 100%);
+		background: -o-linear-gradient(top, #ff4800 0%, #ef2c00 100%);
+		background: -ms-linear-gradient(top, #ff4800 0%, #ef2c00 100%);
+		background: linear-gradient(to bottom, #ff4800 0%, #ef2c00 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4800', endColorstr='#ef2c00', GradientType=0 );
+		border: 1px solid #48150c;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.84), 0 0 7px rgba(237, 20, 20, 0.74);
+		border-radius: 14px 0 14px 0;
+		transform: skewX(-10deg);
+		position: relative
+		height: 46px
+		max-width: 299px;
+		width: auto
+		&:after
+			content: ''
+			position: absolute
+			right: -5px
+			top: 0
+			@include sprite($icon-button-arrow)
+			transform: skewX(10deg);
+		span
+			transform: skewX(1deg);
+//Products
+.page_cart
+	.container
+		max-width: $cart_width
+		min-width: $cart_width
+.product_container
+	//background: url(../img/common/bg_products.jpg) top center no-repeat
+	background: #f6f9f8
+	background-size: cover
+	border-bottom: 1px solid #d7d7d7
+	padding-bottom: 50px
+	min-width: $cart_width
+	&.no_padding_bottom
+		padding-bottom: 0
+.discount
+	text-align: center
+	background-color: #ba1f1f
+	box-shadow: inset 0 -1px 9px rgba(0, 0, 0, 0.22)
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: white;
+	font-weight: 700;
+	padding-top: 8px
+	padding-bottom: 6px
+	min-width: $cart_width
+	span
+		color: #fde950;
+		font-weight: 700;
+		&.icon
+			font-style: italic;
+			text-transform: uppercase;
+			&.icon_car
+				&:before
+					content: ''
+					display: inline-block
+					vertical-align: top
+					margin-top: 2px
+					margin-right: 3px
+					margin-left: 3px
+					@include sprite($icon-car)
+			&.icon_podarok
+				&:before
+					content: ''
+					display: inline-block
+					vertical-align: top
+					margin-top: -2px
+					margin-right: 5px
+					margin-left: 3px
+					@include sprite($icon-podarok)
+.top_line
+	padding-top: 16px
+	.site_name
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700
+		font-size: 24px
+		text-transform: uppercase
+		//@media (max-width: $size_sm)
+		//	text-align: center
+		span
+			padding-left: 12px
+			font-size: 16px
+			color: #494338;
+			text-transform: none
+	.tv_logo_container
+		display: flex
+		//@media (max-width: $size_sm)
+		//	display: none
+		span
+			margin-right: 10px
+			font-size: 16px
+		.tv_logo
+			@include sprite($icon-tv-logos)
+.products
+	padding-top: 70px
+	margin-bottom: 25px
+	font-family: 'Roboto Condensed', sans-serif;
+	.container
+		padding-left: 7px
+		padding-right: 7px
+		min-width: $cart_width;
+		.row
+			margin-left: -7px
+			margin-right: -7px
+			.costume_padding
+				padding-left: 5px
+				padding-right: 5px
+	//@media (max-width: $size_sm)
+	//	padding-top: 30px
+	.product_item
+		cursor: pointer
+		position: relative
+		&.center
+			.image
+				.name
+					padding-left: 20px
+				.product_image
+					margin-left: -20px
+		//@media (max-width: $size_sm)
+		//	max-width: 400px
+		//	margin: auto
+		//	margin-bottom: 20px
+		.sense
+			position: absolute
+			top: -45px
+			right: -190px
+			z-index: 4
+			display: flex
+			//@media (max-width: $size_sm)
+			//	display: none
+			.left_side
+				font-weight: 400;
+				line-height: 14px;
+				font-size: 11px;
+				box-shadow: inset -11px -0.4px 10px rgba(0, 38, 133, 0.15);
+				background: #009F6D
+				color: #fff
+				padding-left: 10px
+				padding-right: 8px
+				padding-top: 8px
+				min-height: 45px
+				text-align: right
+				border-radius: 0 0 0 6px;
+				span
+					display: block
+					font-size: 16px;
+			.right_side
+				background: #fff
+				color: #375855;
+				font-size: 14px;
+				font-style: italic;
+				display: flex
+				align-items: center
+				justify-content: center
+				padding-left: 14px
+				padding-right: 14px
+				position: relative
+				border-radius: 0 6px 6px 0;
+				border: 2px solid #00A676
+				&:before
+					content: ''
+					position: absolute
+					bottom: -14px
+					left: 0
+					width: 0;
+					height: 0;
+					z-index: 2
+					border-top: 14px solid #fff; 
+					border-right: 20px solid transparent;
+				&:after
+					content: ''
+					position: absolute
+					bottom: -17px
+					left: -2px
+					width: 0;
+					height: 0;
+					z-index: 1
+					border-top: 17px solid #00A676; 
+					border-right: 26px solid transparent;
+		.most_popular
+			position: absolute
+			left: -8px;
+			top: -9px;
+			z-index: 3
+			@include sprite($icon-most-popular)
+		.shadow
+			box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+			border-radius: 4px 4px 0 0;
+		.image
+			border-radius: 4px 4px 0 0;
+			height: 173px
+			padding-left: 20px
+			display: flex
+			position: relative
+			z-index: 2
+			justify-content: space-between
+			background:#fff url(../img/common/image_gradient.png) bottom left no-repeat
+			.name
+				color: #757879;
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 20px;
+				padding-top: 23px
+				.product_image
+					padding-top: 21px
+			.avatar
+				align-self: flex-end
+				img
+					width: auto
+					max-height: 80%
+		.product_info
+			padding-top: 23px
+			padding-left: 20px
+			padding-bottom: 24px
+			position: relative
+			background: #fff
+			&:after
+				content: ''
+				display: block
+				width: 100%
+				position: absolute
+				bottom: -9px
+				height: 14px
+				margin-left: -20px
+				background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAh1BMVEX///8AAAD9/f3c3Nx6enri4uL+/v7+/v7k5ORgYGAAAAAAAAB7e3vp6en////////r6+t9fX0AAAAAAAAAAAAAAACVlZXv7+/w8PCZmZkAAAAAAAAAAAAAAAAAAAAAAACrq6v09PQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////ZlXo/AAAALHRSTlMAAPORQZ33+qA1ISA+rPz9rz8bFhQXSLu/SxUPCwkQHFXLHwoGAwIEEQcBDFPQ5NMAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAbElEQVQI17XHVxKCMBQF0Ktiy7ORBGwp0l5IZP/rg9HRGRfg+TsYfuEvny+y5er79WYrSOz2h9ePp5yk0oWk8jz9ciV5uxtrnPLiUaH2yjVtx6E1feEJ2pnYJQApxGevYWNIszcO0YI/myTmEbQ4Gu9bSs5cAAAAAElFTkSuQmCC') repeat-x;
+			.title
+				color: #757879
+				font-size: 26px
+				line-height: 20px
+				text-align: center
+				margin-bottom: 25px
+				small
+					padding-top: 15px
+					display: block
+					color: #757879
+					font-size: 14px
+					font-weight: 300
+			.list
+				li
+					font-size: 16px
+					line-height: 18px
+					color: black
+					font-weight: 700
+					min-height: 17px
+					margin-bottom: 15px
+					display: flex
+					align-items: flex-start
+					&:before
+						content: ''
+						margin-right: 8px
+						flex: 0 0 auto
+						margin-top: -1px
+						@include sprite($icon-checkbox)
+					&:last-child
+						margin-bottom: 0
+					&.icon_red
+						span
+							color: #E91A43;
+							font-style: italic;
+							text-transform: uppercase;
+							padding-top: 3px
+							&:before
+								content: ''
+								display: inline-block
+								vertical-align: top
+								margin-right: 1px
+								margin-top: -2px
+								margin-left: -2px
+								@include sprite($icon-car-red)
+		.price_container
+			padding-top: 27px
+			.old_price
+				text-align: center
+				color: #757879;
+				font-size: 16px;
+				font-weight: 400;
+				margin-bottom: 5px
+				span
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						left: 0
+						top: 7px
+						width: 110%;
+						height: 2px;
+						transform: rotate(10deg)
+						background-color: #C5290D;
+			.price
+				color: #08436d
+				font-size: 30px
+				font-weight: 400
+				line-height: 30px
+				text-align: center
+				display: flex
+				justify-content: center
+				span
+					padding-left: 9px
+					text-align: left
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 14px;
+			.select_container
+				display: flex
+				justify-content: flex-end
+				align-items: flex-start
+				padding-top: 23px
+				.select
+					display: inline-flex
+					justify-content: flex-end
+					color: #005A9F;
+					font-size: 16px;
+					font-weight: 700;
+					font-style: italic;
+					line-height: 16px;
+					text-transform: uppercase;
+					align-items: center
+					padding-right: 18px
+					padding-left: 20px
+					i
+						border-bottom: 1px #005A9F dashed
+					span
+						width: 18px;
+						height: 18px;
+						background-color: white;
+						box-shadow: inset 0 1px 1px black;
+						border-radius: 100%
+						margin-left: 14px
+		.rating_container
+			padding-left: 15px
+			padding-right: 15px
+			position: relative
+			border-bottom: 1px solid #77C4CA
+			border-radius: 0 0 4px 4px
+			padding-bottom: 14px
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#77C4CA), to(transparent));
+				background-image: -webkit-linear-gradient(transparent, #77C4CA);
+				background-image: -moz-linear-gradient(transparent, #77C4CA);
+				background-image: -o-linear-gradient(transparent, #77C4CA);
+				height: 70%
+				bottom: 1px
+				width: 1px
+			&:before
+				left: 0px
+			&:after
+				right: 0px
+			.rating_flex
+				display: flex
+				justify-content: space-between
+				padding-top: 20px
+				.name
+					color: #a1a1a1;
+					font-size: 12px
+					font-weight: 700
+					font-style: italic
+					line-height: 24px
+					text-transform: uppercase
+					.stars
+						position: relative
+						&.num_90
+							span
+								width: 61%
+						&.num_80
+							span
+								width: 43%
+						span
+							position: absolute
+							left: 0
+							top: 0
+							@include sprite($icon-rating-active)
+							width: 34%
+						&:before
+							content: ''
+							display: block
+							@include sprite($icon-rating-default)
+				.num_rating
+					width: 42px;
+					height: 34px;
+					background-color: #fced7a;
+					border-radius: 7px;
+					text-align: center
+					color: #5d6062;
+					font-size: 24px;
+					font-weight: 700;
+					font-style: italic;
+					line-height: 24px;
+					text-transform: uppercase;
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-right: 3px;
+					margin-top: 5px;
+			.rating_by
+				text-align: right
+				color: #a1a1a1;
+				font-size: 11px;
+				font-style: italic;
+				line-height: 18px;
+				padding-top: 3px
+				&:after
+					content: ''
+					display: inline-block
+					vertical-align: middle
+					margin-top: 4px
+					margin-left: 4px
+					@include sprite($icon-amazon)
+		&.selected
+			margin-top: -20px
+			//@media (max-width: $size_sm)
+			//	margin-top: 0
+			.shadow
+				box-shadow: 0 1px 6px rgba(0, 0, 0, 0.49), inset 0 1px 0 white;
+			.image
+				height: 197px
+				border: 2px solid #08436d;
+				border-bottom: 0;
+				.name
+					color: #0069B7
+				.product_image
+					padding-top: 41px
+			.product_info
+				border: 2px solid #08436d;
+				border-top: 0;
+				border-bottom: 0;
+				background: rgba(255,255,255,1);
+				background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 34%, rgba(255,243,176,1) 100%);
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(34%, rgba(255,255,255,1)), color-stop(100%, rgba(255,243,176,1)));
+				background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 34%, rgba(255,243,176,1) 100%);
+				background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 34%, rgba(255,243,176,1) 100%);
+				background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 34%, rgba(255,243,176,1) 100%);
+				background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 34%, rgba(255,243,176,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fff3b0', GradientType=0 );
+				padding-bottom: 29px;
+				&:after
+					display: none
+				.title
+					strong
+						color: #0069B7
+				.list
+					li
+						&:before
+							@include sprite($icon-checkbox-active)
+			.price_container
+				background-image: linear-gradient(to top, #044587 0%, #006eb9 52%, #044587 99%, #044587 100%);
+				position: relative
+				border-radius: 0 0 4px 4px
+				border: 2px solid #08436d;
+				border-top: 0;
+				&:before
+					content: ""
+					width: 100%
+					height: 5px
+					position: absolute
+					top: -5px
+					background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAFCAMAAACtk0YeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAY1BMVEUERYcERocERYgERogERYcERYcERYcERYcERYcERYcERYcERYcERYcERYcERYcERogERYcDRocERocERogERYgERogERogERogERokERogERYcERocERYgERogERokDRoj///+xevjLAAAAGnRSTlMAAAAAQBy0KxCH9v2dHgZz6/aJEAJb4eyEzivdvL0AAAABYktHRCCzaz2AAAAACXBIWXMAAAsSAAALEgHS3X78AAAAQElEQVQI12NgYUAGrAxSbOxwHgcnF4O0DDcPLwMjIxMTH7+AlCyDrJSMrKCQMLOIqJgsEDDIgoG4hCSQlJOXBQBdywQUAGCLhwAAAABJRU5ErkJggg==') repeat-x;
+				.price
+					color: white;
+					font-weight: 700
+					font-size: 36px
+					align-content: flex-start
+					span
+						color: #08436d
+						background-image: linear-gradient(to right, white 0%, transparent 100%)
+						padding-left: 3px
+						margin-left: 7px
+						padding-right: 15px
+						margin-right: -15px
+						font-weight: 700;
+						padding-top: 2px
+				.old_price
+					color: #ffef78;
+				.select
+					min-height: 36px;
+					background: #ffffff;
+					background: -moz-linear-gradient(top, #ffffff 0%, #ddf3fa 100%);
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ddf3fa));
+					background: -webkit-linear-gradient(top, #ffffff 0%, #ddf3fa 100%);
+					background: -o-linear-gradient(top, #ffffff 0%, #ddf3fa 100%);
+					background: -ms-linear-gradient(top, #ffffff 0%, #ddf3fa 100%);
+					background: linear-gradient(to bottom, #ffffff 0%, #ddf3fa 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ddf3fa', GradientType=0 );
+					font-size: 18px;
+					border-radius: 10px 0 4px 0;
+					font-weight: 800
+					i
+						border: 0
+					span
+						border: 2px solid #375855
+						box-shadow: none
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							left: -2px;
+							top: -13px;
+							@include sprite($icon-radio-active)
+.button_container
+	display: flex
+	justify-content: flex-end
+.order_container
+	padding-top: 21px
+	font-family: 'Roboto Condensed', sans-serif;
+	min-width: $cart_width
+	.container
+		color: #fff
+		background-image: linear-gradient(to right, #044587 0%, #006eb9 52%, #044587 99%, #044587 100%);
+		border-radius: 0px 0px 3px 3px;
+		padding-bottom: 10px
+		padding-left: 8px
+		padding-right: 8px
+		.row
+			margin-left: -8px
+			margin-right: -8px
+			.costume_padding
+				padding-left: 8px
+				padding-right: 8px
+			.content_side
+				padding-right: 4px
+				flex: 0 0 66.666667%;
+				max-width: 66.666667%;
+				//@media (max-width: $size_sm)
+				//	padding-right: 8px
+				//@media (min-width: $size_sm)
+				//	width: 64%
+				//	flex: 0 0 64%;
+				//	max-width: 64%;
+			.sidebar_side
+				padding-left: 4px
+				flex: 0 0 33.333333%;
+				max-width: 33.333333%;
+				//@media (max-width: $size_sm)
+				//	padding-left: 8px
+				//@media (min-width: $size_sm)
+				//	width: 36%
+				//	flex: 0 0 36%;
+				//	max-width: 36%;
+	.info_line
+		min-height: 33px
+		padding-top: 5px
+		background-color: white;
+		border: 2px solid #9a1818;
+		border-radius: 3px 3px 0px 0px;
+		box-shadow: inset 0 0 7px rgba(186, 31, 31, 0.61);
+		margin-left: -8px
+		margin-right: -8px
+		padding-left: 15px
+		font-size: 14px;
+		line-height: 20px;
+		color: #757879;
+		font-weight: 400
+		strong
+			text-transform: uppercase
+			color: #ba1f1f;
+			font-style: italic;
+		span
+			color: #ba1f1f;
+			font-style: italic;
+			&:before
+				content: ''
+				display: inline-block
+				vertical-align: top
+				margin-right: 4px
+				margin-top: -1px
+				@include sprite($icon-batare)
+	.title_container
+		padding-top: 12px
+		min-height: 67px
+		position: relative
+		//@media (max-width: $size_xs)
+		//	margin-bottom: 5px
+		//	text-align: center
+		.icon_final
+			@include sprite($icon-final-offer)
+			position: absolute
+			right: -175px
+			bottom: -30px
+			z-index: 4
+			//@media (max-width: $size_xs)
+			//	display: none
+		.go_back
+			color: #9dbdd4;
+			font-size: 18px;
+			font-weight: 700;
+			font-style: italic;
+			line-height: 14px;
+			text-decoration: none
+			position: relative
+			@include sprite($icon-go-back)
+			text-align: center
+			display: inline-flex
+			vertical-align: top
+			align-items: center
+			justify-content: center
+			margin-right: 10px
+			margin-left: 8px
+			//@media (max-width: $size_xs)
+			//	display: flex
+			//	margin-bottom: 5px
+		span
+			position: relative
+			color: white;
+			font-size: 36px;
+			font-weight: 700;
+			font-style: italic;
+			line-height: 36px;
+			text-transform: uppercase;
+			//@media (max-width: $size_xs)
+			//	display: block
+			//	font-size: 26px
+		i
+			display: block
+			color: #fcec70;
+			font-size: 16px;
+			font-style: italic;
+			line-height: 16px;
+			margin-top: -3px
+.product_card
+	position: relative
+	background: #ffffff;
+	background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 30%, #ffec74 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, #ffffff), color-stop(30%, #ffffff), color-stop(100%, #ffec74));
+	background: -webkit-linear-gradient(-45deg, #ffffff 0%, #ffffff 30%, #ffec74 100%);
+	background: -o-linear-gradient(-45deg, #ffffff 0%, #ffffff 30%, #ffec74 100%);
+	background: -ms-linear-gradient(-45deg, #ffffff 0%, #ffffff 30%, #ffec74 100%);
+	background: linear-gradient(135deg, #ffffff 0%, #ffffff 30%, #ffec74 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffec74', GradientType=1 );
+	border: 3px solid #003569;
+	border-radius: 6px;
+	box-shadow: 0px 3px 8px #004E8B;
+	padding-left: 10px
+	padding-top: 25px
+	margin-bottom: 15px
+	//@media (max-width: $size_xs)
+	//	padding-top: 60px
+	.most_popular
+		position: absolute
+		left: -8px;
+		top: -9px;
+		@include sprite($icon-most-popular)
+	.avatar
+		position: absolute
+		right: 0
+		bottom: 37px
+		//@media (max-width: $size_xs)
+		//	width: 35%
+		//	img
+		//		width: 100%
+		//		height: auto
+	.select
+		position: absolute
+		right: 0
+		top: 0
+		min-width: 216px;
+		height: 36px;
+		background-color: #093867;
+		display: inline-flex
+		justify-content: flex-end
+		color: white;
+		font-size: 18px;
+		font-weight: 700;
+		font-style: italic;
+		line-height: 23px;
+		text-transform: uppercase;
+		align-items: center
+		padding-right: 18px
+		padding-left: 20px
+		border-radius: 0 0 0 16px
+		padding-bottom: 4px
+		span
+			width: 18px;
+			height: 18px;
+			background-color: white;
+			border: 2px solid #375855;
+			border-radius: 100%
+			margin-left: 14px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				left: -2px;
+				top: -13px;
+				@include sprite($icon-radio-active)
+	.title
+		text-shadow: 0.3px 1px 0 rgba(255, 255, 255, 0.63);
+		font-size: 36px;
+		line-height: 20px;
+		color: #5d6062;
+		font-weight: 400;
+		padding-left: 30px
+		margin-bottom: 17px
+		//@media (max-width: $size_xs)
+		//	text-align: center
+		//	padding-left: 0
+		strong
+			color: #0069b3;
+		span
+			display: block
+			color: #757879;
+			font-size: 14px;
+			font-weight: 300;
+			padding-top: 16px
+	.product_info
+		display: flex
+		color: black
+		margin-bottom: 20px
+		//@media (max-width: $size_xs)
+		//	display: block
+		.left_side
+			flex: 0 0 190px
+			//@media (max-width: $size_xs)
+			//	margin-bottom: 25px
+			.image
+				text-align: center
+				padding-left: 22px
+				position: relative
+				margin-bottom: 20px
+				//@media (max-width: $size_xs)
+				//	padding-left: 0
+				//	background: rgba(255,255,255,0);
+				//	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.19) 19%, rgba(192,232,244,1) 100%);
+				//	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(19%, rgba(255,255,255,0.19)), color-stop(100%, rgba(192,232,244,1)));
+				//	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.19) 19%, rgba(192,232,244,1) 100%);
+				//	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.19) 19%, rgba(192,232,244,1) 100%);
+				//	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.19) 19%, rgba(192,232,244,1) 100%);
+				//	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.19) 19%, rgba(192,232,244,1) 100%);
+				//	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c0e8f4', GradientType=0 );
+				//	margin-left: -10px
+				img
+					position: relative
+					z-index: 2
+					margin-bottom: -8px
+				&:before
+					content: ''
+					position: absolute
+					left: -10px
+					bottom: 0
+					background: url(../img/common/image_gradient_card.png) no-repeat;
+					width: 289px
+					height: 189px
+					//@media (max-width: $size_xs)
+					//	display: none
+			.old_price
+				text-align: center
+				color: #757879;
+				font-size: 16px;
+				font-weight: 400;
+				margin-bottom: 5px
+				padding-left: 22px
+				//@media (max-width: $size_xs)
+				//	padding-left: 0
+				span
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						left: 0
+						top: 7px
+						width: 110%;
+						height: 2px;
+						transform: rotate(10deg)
+						background-color: #C5290D;
+		.right_side
+			position: relative
+			z-index: 4
+			margin-left: 10px
+			.list
+				margin-bottom: 15px
+				padding-top: 11px
+				max-width: 210px
+				min-height: 120px
+				li
+					font-size: 16px
+					line-height: 18px
+					color: black
+					font-weight: 700
+					min-height: 17px
+					margin-bottom: 15px
+					display: flex
+					align-items: flex-start
+					&:before
+						content: ''
+						margin-right: 8px
+						flex: 0 0 auto
+						margin-top: -1px
+						@include sprite($icon-checkbox-active)
+					&:last-child
+						margin-bottom: 0
+					&.icon_red
+						span
+							color: #E91A43;
+							font-style: italic;
+							text-transform: uppercase;
+							padding-top: 3px
+							&:before
+								content: ''
+								display: inline-block
+								vertical-align: top
+								margin-right: 1px
+								margin-top: -2px
+								margin-left: -2px
+								@include sprite($icon-car-red)
+			.price
+				color: #E91A43;
+				font-size: 36px
+				font-weight: 700
+				line-height: 30px
+				text-align: center
+				display: inline-flex
+				vertical-align: top
+				background: #fff
+				padding-top: 14px
+				padding-bottom: 14px
+				padding-left: 15px
+				padding-right: 16px
+				border-radius: 30px;
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					right: -16px
+					top: 0
+					width: 37px;
+					height: 57px;
+					background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAA5CAMAAACGVBLRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAz1BMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////LRjS1AAAARHRSTlMAx34w0m0O8YkW9IQM5lm5I/ZyAboZ60/+hQMT3ivwRfpkgJQCpwaxtQi2sKWWfFv5Qi2Xpgm3lYH7Rt+7JOf18otvMdUK0HMAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAA8klEQVRIx63WyVLCQBhF4Q4iDsgkURE1KGIQJ3AAB1AUz/s/k2xZWH0WZP1Vqrvz970JSWEjxB+guFkSCra2d4SC3fKeUFCpGgW1ulE09ptCQXpgFIdHRtE6bgu13MSJUZyeGUXWMYrzC6OgqxSXPaO4yo2inxvF9cAoagOjuMmN4jY3iru2Udw3jeJBqdbQKEaPRpE9GUWytnepdbk9ls15PZuzfzHfsW9mQs1XOhazOhmLuVd3SN3H15UY+we9iZx4N5mTfYj8mposTEWuqoxWeT8T3aF6KP0MIaa+RD/ORdd+/8R7u7iI/gMk3d8YCeEPV9RMSDrueWwAAAAASUVORK5CYII=');
+				span
+					position: relative
+					z-index: 2
+					color: #B41010
+					padding-left: 9px
+					text-align: left
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 14px;
+	.card_footer
+		position: relative
+		z-index: 3
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		//@media (max-width: $size_xs)
+		//	display: block
+		.left_side
+			color: #5d5d5d;
+			font-size: 18px;
+			font-weight: 400;
+			span
+				color: #E91A43;
+				font-size: 24px;
+				font-weight: 700;
+				font-style: italic;
+				text-transform: uppercase;
+				margin-right: 9px
+				//@media (max-width: $size_xs)
+				//	display: block
+				&:before
+					content: ''
+					display: inline-block
+					vertical-align: top
+					margin-right: 2px
+					margin-top: 2px
+					@include sprite($icon-include)
+		.right_side
+			.persons
+				display: flex
+				align-items: center
+				color: #81f8ff
+				background-color: #093867;
+				padding-right: 15px
+				padding-left: 15px
+				padding-top: 10px
+				padding-bottom: 10px
+				border-radius: 6px 0 0 0;
+				&:before
+					flex: 0 0 auto
+					content: ''
+					margin-right: 9px
+					@include sprite($icon-users)
+.refund_container
+	background: #f6f3e9 url(../img/common/bg_refund.png) no-repeat;
+	background-size: cover
+	border: 5px solid #a12a15;
+	border-radius: 3px;
+	padding: 3px
+	margin-bottom: 20px
+	.refund_border
+		border: 1px solid #a12a15;
+		border-radius: 3px;
+		padding: 15px
+		display: flex
+		justify-content: space-between
+		//@media (max-width: $size_sm)
+		//	display: block
+		//	padding-bottom: 10px
+	.image.icon_moneyback
+		flex: 0 0 auto;
+		margin-right: 15px
+		@include sprite($icon-money-back)
+		//@media (max-width: $size_sm)
+		//	margin: auto
+		//	margin-bottom: 15px
+	.text
+		color: #5d6062;
+		font-size: 14px;
+		font-weight: 400;
+		//@media (max-width: $size_sm)
+		//	text-align: center
+		.title
+			margin-bottom: 12px
+			color: #9e2a14;
+			font-size: 16px;
+			font-weight: 700;
+			font-style: italic;
+			text-transform: uppercase;
+		.user_card
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			margin-top: -10px
+			position: relative
+			//@media (max-width: $size_sm)
+			//	flex-flow: column nowrap
+			//	justify-content: center
+			//	margin-top: 10px
+			.rospis
+				margin-bottom: -10px
+				//@media (max-width: $size_sm)
+				//	order: 3
+				//	flex-flow: column nowrap
+				//	margin-bottom: 10px
+				//	margin-top: 5px
+				@include sprite($icon-refund-rospis)
+			.name
+				text-align: right
+				color: #5d6062;
+				font-size: 11px;
+				//@media (max-width: $size_sm)
+				//	order: 1
+				//	text-align: center
+				span
+					display: block
+					font-weight: 300;
+					font-style: italic;
+			.avatar
+				margin-left: 12px
+				//@media (max-width: $size_sm)
+				//	margin-left: 0
+				//	margin-bottom: 5px
+				img
+					border-radius: 100px;
+.timer_container
+	border: 1px solid rgba(218,218,218, 0.45);
+	border-radius: 32px;
+	padding-left: 15px
+	padding-right: 15px
+	display: flex
+	align-items: center
+	justify-content: center
+	min-height: 64px
+	color: white;
+	font-size: 14px;
+	font-style: italic;
+	font-family: 'Roboto Condensed', sans-serif;
+	position: relative
+	margin-right: 39px
+	margin-bottom: 40px
+	//@media (max-width: $size_xs)
+	//	display: block
+	//	text-align: center
+	//	padding-top: 10px
+	//	padding-bottom: 10px
+	//	margin-right: 0
+	.title
+		flex: 1 1 20%;
+		color: #fee950;
+		font-size: 30px;
+		font-weight: 700;
+		font-style: italic;
+		line-height: 25px;
+		text-transform: uppercase;
+		//@media (max-width: $size_xs)
+		//	margin-bottom: 10px
+	.text
+		flex: 1 1 22%;
+		//@media (max-width: $size_xs)
+		//	margin-bottom: 10px
+	.timer
+		position: absolute
+		right: 0
+		top: 0
+		background-color: white;
+		border-radius: 33px 0  0 33px;
+		width: 110px;
+		min-height: 65px;
+		color: #D21212;
+		font-size: 14px;
+		font-weight: 600
+		font-style: italic;
+		line-height: 18px;
+		margin-right: -16px
+		position: relative
+		margin-bottom: -1px
+		z-index: 2
+		padding-top: 10px
+		text-align: center
+		letter-spacing: -1px
+		padding-left: 23px
+		padding-right: 0
+		//@media (max-width: $size_xs)
+		//	padding-right: 23px
+		//	width: 100%
+		//	border-radius: 33px
+		&:after
+			content: ''
+			width: 39px;
+			height: 65px;
+			position: absolute
+			right: -39px
+			top: 0
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAABBCAMAAABl0E1AAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA0lBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8Y/9RiAAAARXRSTlMAs3ct35Eq/rg9tyz7DuRJmgrW9VyMA7YN0BvgKOwz8DrzQEE8NyTbFcixlm/8J9UMqXD6znGqSsvlQ9GN15v9kg8wrY+q66I1AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQRJREFUSMet1tlOAkEURdGriApoI7biAFo44TzhgDNO+/9/SV8xIb0Tu55XOpWuuudUTE1XwixgpjqrHMzN15T7XfWGcyxUF5WDrOkcLLWcY7nhHPmKc7Dado61defY2HSOTtc5tradI/WcY2fXOfI958j3nSMdOEeqOEfWd47DI+c4bjnHSds5TqXjTLrzpnOkC+e4vHKOa+kYSHdTc47bcr935/Z3X+r/S113vkN3voNS75+8zw9uPuS8Pbr5lXkg8yUfr8aJ7Mnl6Z+Y/F8+y7yX/fHs+kj224vqS9m/rxMfPWPsTb0PsmFEsRu9f4Rw9c+IQjf66kUUus53v0hFyPffDzLYmwicutKOAAAAAElFTkSuQmCC');
+			//@media (max-width: $size_xs)
+			//	display: none
+		span.number
+			display: block
+			font-weight: 700
+			font-style: normal
+			font-size: 28px
+			padding-top: 3px
+			display: flex
+			overflow: hidden
+			text-align: center
+			&:before
+				content: ''
+				flex: 0 0 auto
+				display: inline-block
+				vertical-align: top
+				margin-top: -3px
+				margin-right: 5px
+				@include sprite($icon-timer)
+.garant
+	//@media (max-width: $size_xs)
+	//	text-align: center
+	p
+		margin-bottom: 15px
+	.text
+		display: flex
+		align-items: center
+		//@media (max-width: $size_xs)
+		//	display: block
+		.image
+			flex: 0 0 auto
+			@include sprite($icon-amazon-checkout)
+			margin-right: 12px
+			//@media (max-width: $size_xs)
+			//	margin: auto
+			//	margin-bottom: 15px
+.offers_list
+	font-family: 'Roboto Condensed', sans-serif;
+	li
+		background-color: white;
+		background-image: linear-gradient(to top, rgba(92, 92, 92, 0.01) 0%, rgba(92, 92, 92, 0.01) 1%, rgba(255, 255, 255, 0.01) 100%);
+		border: 2px solid #375855;
+		border-radius: 3px;
+		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.49), inset 0 1px 0 white;
+		padding-left: 25px
+		margin-bottom: 5px
+		cursor: pointer
+		//@media (max-width: $size_xs)
+		//	padding-left: 0
+		&.selected
+			background-color: #ffec87;
+			background-image: linear-gradient(to top, rgba(92, 92, 92, 0.17) 0%, rgba(92, 92, 92, 0.17) 1%, rgba(255, 255, 255, 0.17) 100%);
+			border: 5px solid #b72424;
+			box-shadow: 0 1px 6px rgba(0, 0, 0, 0.49), inset 0 1px 0 white;
+			.offer_header
+				.shipping_info
+					background-color: #D43200;
+					border-radius: 0 0 0 5px;
+					color: #ffec87;
+					&:after
+						content: ''
+						position: absolute
+						bottom: -9px
+						right: 50px
+						width: 18px;
+						height: 9px;
+						background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAMAAAAIAYw9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAbFBMVEXTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQT///83XwzgAAAAInRSTlMAqfmTGMH9oSHa/q8r9Lw3DclEJtVSAUHfXwJa6G0GYnoMDLRAhAAAAAFiS0dEIypibDoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABJSURBVAjXVchVEoAgAEDBZ3d3K/c/pA4qA/u5YAmd7bjgaeEHIY9IRZykSNk/efEG5RdVza+R0Xa9GoYnxmlGs4h12zEc52UGNxzRCcRDL0QBAAAAAElFTkSuQmCC');
+						//@media (max-width: $size_xs)
+						//	display: none
+					span
+						color: #fff
+						&:before
+							@include sprite($icon-car-white)
+			.offer_middle
+				.image
+					.checkbox
+						background-color: white;
+						border: 3px solid #9a1818;
+						border-radius: 3px;
+						box-shadow: inset 1.4px 1px 2px #43625f;
+						&:before
+							content: ''
+							position: absolute
+							left: 7px
+							top: 8px
+							@include sprite($icon-radio-active)
+				.price_container
+					.price
+						background-image: linear-gradient(to right, white 0%, transparent 100%);
+						color: #b72424;
+						font-size: 36px;
+						font-weight: 700;
+			.offer_footer
+				.special
+					display: flex
+					//@media (max-width: $size_xs)
+					//	flex: 1 1 auto;
+					//	min-width: inherit
+					//	padding-right: 25px
+				.select
+					//@media (max-width: $size_xs)
+					//	flex: 0 0 auto;
+					color: white;
+					font-size: 18px;
+					font-weight: 700;
+					font-style: italic;
+					line-height: 23px;
+					text-transform: uppercase;
+					//@media (max-width: $size_xs)
+					//	flex: 0 0 auto;
+					@include sprite($icon-select-bg-active)
+					span
+						margin-left: 10px
+						position: relative
+						box-shadow: none;
+						&:before
+							content: ''
+							position: absolute
+							left: -1px
+							top: -11px
+							@include sprite($icon-radio-active)
+		&.no_image
+			.offer_header
+				.shipping_info
+					background: none
+					padding-top: 25px
+					color: #757879 !important;
+					font-size: 16px
+					//@media (max-width: $size_xs)
+					//	padding-top: 0px
+					//	min-height: inherit
+					&:after
+						display: none !important
+			.offer_middle
+				.image
+					margin-right: 0
+					min-width: 150px
+				.text
+					color: #757879;
+					font-size: 16px;
+					font-weight: 400;
+					display: flex
+					align-items: center
+					margin-right: auto
+					//@media (max-width: $size_xs)
+					//	text-align: center
+					//	margin-right: 0
+					//	justify-content: center
+					//	padding-top: 10px
+		.offer_header
+			position: relative
+			padding-top: 23px
+			display: flex
+			justify-content: space-between
+			//@media (max-width: $size_xs)
+			//	display: block
+			//	text-align: center
+			//	padding-top: 15px
+			.title
+				text-shadow: 0.3px 1px 0 rgba(255, 255, 255, 0.63);
+				font-size: 20px;
+				line-height: 20px;
+				color: #606060;
+				font-weight: 400;
+				//@media (max-width: $size_xs)
+				//	margin-bottom: 15px
+				span
+					color: #D51F1F;
+					font-weight: 700;
+					text-decoration: underline;
+			.shipping_info
+				background: #F1F2F3
+				color: #7b7e7e;
+				font-size: 14px;
+				font-style: italic;
+				line-height: 20px;
+				padding-left: 10px
+				padding-top: 5px
+				padding-right: 10px
+				min-height: 56px
+				padding-bottom: 6px
+				margin-top: -23px
+				margin-bottom: -5px
+				position: relative
+				//@media (max-width: $size_xs)
+				//	margin-top: 0
+				//	margin-bottom: 0
+				span
+					display: block
+					color: #b72424;
+					font-size: 22px;
+					font-weight: 700;
+					font-style: italic;
+					line-height: 22px;
+					text-transform: uppercase;
+					margin-top: 1px
+					&:before
+						content: ''
+						display: inline-block
+						vertical-align: top
+						margin-right: 7px
+						@include sprite($icon-car-big-red)
+		.offer_middle
+			padding-left: 30px
+			display: flex
+			justify-content: space-between
+			//@media (max-width: $size_xs)
+			//	display: block
+			//	padding-left: 0
+			.image
+				position: relative
+				margin-right: 74px
+				min-width: 240px
+				text-align: center
+				padding-top: 10px
+				//@media (max-width: $size_xs)
+				//	margin-top: 15px
+				//	margin-right: 0
+				.checkbox
+					position: absolute
+					left: -30px
+					top: 50%
+					margin-top: -24px
+					width: 48px;
+					height: 48px;
+					background-color: white;
+					border: 2px solid #B7A98F;
+					border-radius: 3px;
+					box-shadow: inset 2.4px 3.2px 5px #c5bead;
+					//@media (max-width: $size_xs)
+					//	left: 0px
+				.icon
+					position: absolute
+					right: -74px
+					top: 0
+					//@media (max-width: $size_xs)
+					//	right: 0
+					&.get_2_free
+						@include sprite($icon-get-2-free)
+					&.get_1_free
+						@include sprite($icon-get-1-free)
+			.price_container
+				padding-top: 25px
+				padding-right: 30px
+				//@media (max-width: $size_xs)
+				//	margin-bottom: 20px
+				.old_price
+					text-align: center
+					color: #757879;
+					font-size: 16px;
+					font-weight: 400;
+					margin-bottom: 5px
+					span
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							left: 0
+							top: 7px
+							width: 110%;
+							height: 2px;
+							transform: rotate(10deg)
+							background-color: #C5290D;
+				.price
+					color: #08436d;
+					font-size: 30px;
+					font-weight: 400;
+					text-align: center
+					display: flex
+					justify-content: center
+					align-items: center
+					padding-left: 6px
+					span
+						padding-left: 9px
+						text-align: left
+						font-size: 14px;
+						color: #375855;
+						font-weight: 400;
+						line-height: 14px;
+		.offer_footer
+			display: flex
+			justify-content: flex-end
+			align-items: flex-end
+			.special
+				background: rgba(248,80,50,0);
+				background: -moz-linear-gradient(left, rgba(248,80,50,0) 0%, rgba(215,39,33,0.91) 91%, rgba(215,39,33,1) 100%);
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,0)), color-stop(91%, rgba(215,39,33,0.91)), color-stop(100%, rgba(215,39,33,1)));
+				background: -webkit-linear-gradient(left, rgba(248,80,50,0) 0%, rgba(215,39,33,0.91) 91%, rgba(215,39,33,1) 100%);
+				background: -o-linear-gradient(left, rgba(248,80,50,0) 0%, rgba(215,39,33,0.91) 91%, rgba(215,39,33,1) 100%);
+				background: -ms-linear-gradient(left, rgba(248,80,50,0) 0%, rgba(215,39,33,0.91) 91%, rgba(215,39,33,1) 100%);
+				background: linear-gradient(to right, rgba(248,80,50,0) 0%, rgba(215,39,33,0.91) 91%, rgba(215,39,33,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#d72721', GradientType=1 );
+				color: #ffec87;
+				font-size: 16px;
+				font-style: italic;
+				line-height: 20px;
+				min-width: 212px;
+				text-align: right
+				padding-right: 40px
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				display: none
+				height: 24px
+				margin-right: -20px
+			.select
+				display: flex
+				align-items: center
+				color: #08436d;
+				font-size: 16px;
+				font-weight: 700;
+				font-style: italic;
+				line-height: 23px;
+				text-transform: uppercase;
+				padding-left: 20px
+				padding-right: 14px
+				min-height: 32px
+				margin-bottom: -1px
+				margin-right: -2px
+				@include sprite($icon-select-bg)
+				span
+					flex: 0 0 auto;
+					width: 18px;
+					height: 18px;
+					margin-left: 35px
+					background-color: white;
+					box-shadow: inset 0 1px 1px black;
+					border-radius: 100%
+.offer_final
+	background-color: white;
+	background-image: linear-gradient(to top, rgba(92, 92, 92, 0.17) 0%, rgba(92, 92, 92, 0.17) 1%, rgba(255, 255, 255, 0.17) 100%);
+	border: 2px solid #375855;
+	border-radius: 3px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.49), inset 0 1px 0 white;
+	margin-bottom: 5px
+	.offer_border
+		border: 3px solid #D51F1F;
+		padding-bottom: 30px
+		position: relative
+		overflow: hidden
+		.bg
+			position: absolute
+			right: -26px
+			bottom: -1px
+			//@media (max-width: $size_xs)
+			//	display: none
+		.offer_header
+			display: flex
+			align-items: flex-start
+			position: relative
+			z-index: 3
+			//@media (max-width: $size_xs)
+			//	display: block
+			.offer_discount
+				font-size: 24px;
+				font-weight: 700;
+				font-style: italic;
+				color: white;
+				background-color: #d33504;
+				border-radius: 0 0 5px 0;
+				padding-left: 20px
+				padding-top: 12px
+				padding-right: 15px
+				min-height: 56px
+				padding-bottom: 6px
+				position: relative
+				text-transform: uppercase;
+				//@media (max-width: $size_xs)
+				//	text-align: center
+				sup
+					vertical-align: top
+					font-size: 12px
+					line-height: 23px
+					margin-left: 2px
+				span
+					color: #fbf043;
+					text-transform: uppercase;
+				&:after
+					content: ''
+					position: absolute
+					left: 20px
+					bottom: -9px
+					width: 18px;
+					height: 9px;
+					background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAMAAAAIAYw9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAbFBMVEXTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQT///83XwzgAAAAInRSTlMAGZP5pyGh/cErr/7aN7z0RMkNAVHVJgJf30IGbedaDHpiWczsfwAAAAFiS0dEIypibDoAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABKSURBVAjXXchHEoAgEATAQTHngFlR/v9IKQpxtY8N5vmK4tCCMCIVw0jSzFUOqyifquDUjb32va4XpgYQ4zTrWvCxbrs68CPP6wbiBwnEN9uAOQAAAABJRU5ErkJggg==');
+					//@media (max-width: $size_xs)
+					//	display: none
+			.offer_text
+				color: #d33504;
+				font-size: 18px;
+				font-weight: 400;
+				padding-left: 20px
+				display: flex
+				align-items: center
+				min-height: 56px
+				justify-content: center
+				//@media (max-width: $size_xs)
+				//	text-align: center
+		.offer_middle
+			padding-top: 16px
+			display: flex
+			position: relative
+			z-index: 3
+			//@media (max-width: $size_xs)
+			//	display: block
+			.image
+				margin-right: 28px
+				padding-left: 30px
+				//@media (max-width: $size_xs)
+				//	margin-right: 0
+				//	padding-left: 0
+				//	text-align: center
+			.right_side
+				.text
+					text-shadow: 0.3px 1px 0 rgba(255, 255, 255, 0.63);
+					color: #035094;
+					font-size: 20px;
+					font-weight: 700;
+					padding-top: 10px
+					margin-bottom: 30px
+					//@media (max-width: $size_xs)
+					//	text-align: center
+				.price_container
+					background-color: white;
+					border: 2px solid #d33504;
+					border-radius: 3px;
+					padding: 8px
+					padding-top: 5px
+					padding-bottom: 3px
+					color: #b72424;
+					font-size: 14px;
+					font-style: italic;
+					position: relative
+					//@media (max-width: $size_xs)
+					//	margin-left: 10px
+					//	margin-right: 10px
+					//	text-align: center
+					&:after
+						content: ''
+						position: absolute
+						right: -30px
+						top: -2px
+						width: 30px;
+						height: 70px;
+						background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABGCAMAAADsM9QKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB7FBMVEX////TNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTTNQTXSBzsqZXzyLv////qnYXliWz//v7jfV7++vnfbkv99/XcYTr88e3bWTD66ePYTSL54tzXRhn21cvWQRP0y77UOgrxv6/UNwftrZrTNgXqoInmj3P++/rgc1HdZD788/D66uTZUif329LVPQ7ywbLus6HolHrkgWL+/fzfbEjdYjzlhmjusZ721Mr77unYSyD+/PveZkHmjnLvt6X32dD88OzZTyTfbEnok3nxvKz43dXVPxDaUyngclDpmoLyxLX54tv99fPaVy7heFfqoYrzyLr55uDWRRjbXDTjf2Dsp5L0zsLUOQnXRhrcYDnkg2XrpY/7OE9fAAAAUnRSTlMAXAG1BWCk/E74QvAx6iTdHNIPxwqzBpF4aVP5N+MVyLkCln5ZQ/Ur4gmMuwPgMl/C5Bc5ZpzJ6fo+b6LO7CFGd6vUDCX+S3+y2vNUiN4TMFequbjrBgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAG8SURBVEjHfdb5N5RRHAbwa8KUsdY0hOyNQpYsUVGSKanUI9+MaWQdYpBd0Z5Ki6xFku0frZxTR3i+99fPec+573O/z3tfE2Ax2sKBQI1rEaTxXQRrXAfrQYXlHg6FKCz1sIUq7G5AWDhn8dxHRCRn8TYi6jBnedCEI3bO0tyCow7O0tqGYAtnafchWmHp6ESMwvKwC8cUlm6/NVZh6UFciMLSC1u8wnvj/4+l7xGOR3IWbz+iEjjLQBMS7ZxlcAhJDs7b8SdzlmEfUhSWjhGkKiyj/+Lfl2XMb01T+E/8JxSWx3DGK+x+grB0zjI+gZOnOA/WIoM/7XmKzCzOz3A6gW/tOZzZ/MVedCKHx/Ly1d9O7Kev3yDXwXkSeWf4ib1FXD4/73cjKODD9H4KhXwUxz+gyMH5I87u7MEu/eQvLuEt+TyNc7xjA19wnjfUPYMLds6zKC3j9Z/zWy/yj8e8D5cM5YVFlFsou7/icoWh/A22K4byUlely1Be/o6rhrJ3BdcsnH+gSrkNVnE93VD+uVZZbSg3r+OGoezZQFIW503cvEX19xXrrOFqtnaO7d7lw22NcSdZY5f6a/ELfala7GHtdpAAAAAASUVORK5CYII=');
+						//@media (max-width: $size_xs)
+						//	display: none
+					.price
+						display: flex
+						align-items: flex-start
+						margin-bottom: 4px
+						//@media (max-width: $size_xs)
+						//	justify-content: center
+						strong
+							color: #b72424;
+							font-size: 36px;
+							font-weight: 700;
+							line-height: 36px;
+						span
+							margin-left: 10px
+							padding-left: 7px
+							padding-right: 12px
+							//background: #9a1818
+							background-image: linear-gradient(to right, #9a1818 75%, transparent 100%);
+							color: white;
+							font-size: 15px;
+							font-weight: 400;
+							line-height: 15px;
+							min-height: 35px
+							display: flex
+							align-items: center
+
+.order_form
+	background-image: linear-gradient(to top, #f4f6f2 0%, #f4f6f2 0%, white 100%);
+	border-radius: 3px;
+	padding-left: 15px
+	padding-right: 15px
+	padding-bottom: 10px
+	padding-top: 14px
+	font-family: 'Roboto Condensed', sans-serif;
+	overflow: hidden
+	.accept
+		color: black
+		font-size: 18px
+		font-weight: 400
+		line-height: 36px
+		display: flex
+		align-items: center
+		margin-bottom: 17px
+		//@media (max-width: $size_xs)
+		//	display: block
+		//	text-align: center
+		span
+			&:after
+				content: ''
+		ul
+			display: flex
+			li
+				margin-left: 9px
+				//@media (max-width: $size_xs)
+				//	margin-left: auto
+				//	margin-right: auto
+				&.visa
+					@include sprite($icon-visa)
+				&.visa_electro
+					@include sprite($icon-visa-electro)
+				&.master
+					@include sprite($icon-master)
+				&.paypal
+					@include sprite($icon-paypal)
+					margin-top: -1px
+				&.amer_exp
+					@include sprite($icon-american-express)
+	.field
+		margin-bottom: 14px
+		input[type=text],
+		input[type=tel],
+		input[type=email],
+		input[type=password]
+			background-color: white;
+			border: 1px solid #dedede;
+			border-radius: 3px;
+			box-shadow: inset 0 1px 1px rgba(46, 52, 33, 0.11);
+			color: black;
+			font-size: 14px;
+			font-weight: 300;
+			width: 100%
+			height: 32px;
+			padding-left: 10px
+		select
+			height: 34px;
+			font-size: 14px
+			color: #000000;
+			padding: 0 6px 0;
+			background: #fdfdfd;
+			background: -moz-linear-gradient(top, #fdfdfd 0%, #fcfcfc 25%, #fafafa 50%, #f9f9f9 75%, #f8f8f8 100%);
+			background: -webkit-linear-gradient(top, #fdfdfd 0%, #fcfcfc 25%, #fafafa 50%, #f9f9f9 75%, #f8f8f8 100%);
+			background: linear-gradient(to bottom, #fdfdfd 0%, #fcfcfc 25%, #fafafa 50%, #f9f9f9 75%, #f8f8f8 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#f8f8f8', GradientType=0);
+			width: 100%;
+			border: 1px solid #dedede;
+			border-radius: 2px;
+			option
+				background: #fdfdfd;
+				background: -moz-linear-gradient(top, #fdfdfd 0%, #fcfcfc 25%, #fafafa 50%, #f9f9f9 75%, #f8f8f8 100%);
+				background: -webkit-linear-gradient(top, #fdfdfd 0%, #fcfcfc 25%, #fafafa 50%, #f9f9f9 75%, #f8f8f8 100%);
+				background: linear-gradient(to bottom, #fdfdfd 0%, #fcfcfc 25%, #fafafa 50%, #f9f9f9 75%, #f8f8f8 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#f8f8f8', GradientType=0);
+				padding-top: 4px
+				padding-bottom: 4px
+		label.error
+			display: block
+			color: red
+			padding-top: 5px
+			padding-left: 10px
+	.hidden_fields
+		display: none
+		border: 0;
+	.ssl_text
+		color: black;
+		font-size: 11px;
+		font-weight: 300;
+		font-style: italic;
+		line-height: 36px;
+		display: flex
+		align-items: center
+		padding-top: 3px
+		margin-bottom: 4px
+		//@media (max-width: $size_xs)
+		//	justify-content: center
+		&:before
+			flex: 0 0 auto;
+			content: ''
+			display: inline-block
+			vertical-align: top
+			margin-right: 4px
+			margin-left: 3px
+			margin-top: -5px
+			@include sprite($icon-ssl)
+	.button.rush
+		margin: auto
+	.pay_logos
+		color: black;
+		font-size: 18px;
+		font-weight: 400;
+		padding-top: 20px
+		//@media (max-width: $size_xs)
+		//	overflow: hidden
+		//	text-align: center
+		span
+			display: block
+			margin-bottom: 14px
+		&:after
+			content: ''
+			display: block
+			@include sprite($icon-pay-logos)
+			//@media (max-width: $size_xs)
+			//	width: 215px
+			//	margin: auto
+//Video
+.video_container
+	.title
+		text-align: center
+		color: #0069b3;
+		font-size: 24px;
+		line-height: 24px;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-style: italic;
+		padding-top: 38px
+		margin-bottom: 40px
+	video
+		display: block
+		width: 100%
+		//@media (max-width: $size_xs)
+		//	margin-bottom: 10px

@@ -1,0 +1,35 @@
+footer
+	.container
+		.row.top_line
+			.col-lg-6.col-md-12
+				.name
+					strong #{common[0].site_name} 
+					| #{common[0].site_desc} 
+			.col-lg-6.col-md-12
+				.footer_menu
+					li
+						a(href="#", data-popup="#page_terms") #{common[0].footer[0]}
+					li
+						a(href="#", data-popup="#page_privacy") #{common[0].footer[1]}
+					li
+						a(href="#", data-popup="#page_contact") #{common[0].footer[2]}
+		.footer_warning
+			| <strong>#{common[0].footer[3]}</strong> #{common[0].footer[4]}
+		.row
+			.col-lg-6
+				.copyright
+					| #{common[0].footer[5]}
+					br
+					| #{common[0].footer[6]}
+			.col-lg-6
+				.logo_list
+					span.item_1
+					span.item_2
+					span.item_3
+					span.item_4
+
+<!-- FIXED BUTTONS -->
+.fixed_buysafe
+a(data-popup="#doctor", href="#").fixed_doctor
+include popups.jade
+include scripts.jade

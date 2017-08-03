@@ -1,0 +1,41 @@
+doctype html
+html(lang="#{common[0].current_lang}")
+	include include/head.jade
+	body(class="lang_#{common[0].current_lang}")
+		include include/warning.jade
+		hr
+		.container
+			h1 Переменные текса для локализации 
+			br
+			.row
+				.col-md-4
+					| #{landing[0].test}
+				.col-md-4
+					| #{landing[0].test}
+				.col-md-4
+					| #{landing[0].test}
+		br
+		.container
+			h1 Переменные картинки для локализации
+			br
+			.row
+				.col-md-6
+					img.responsive(src="img/lang_#{common[0].current_lang}/test.jpg", alt="")
+				.col-md-6
+					img.responsive(src="img/lang_#{common[0].current_lang}/test.jpg", alt="")
+		br
+		.container
+			h1 Общие изображения не требующие перевода
+			br
+			.row
+				.col-md-6
+					img.responsive(src="img/common/background.jpg", alt="")
+				.col-md-6
+					img.responsive(src="img/common/background.jpg", alt="")
+		hr
+		#step_1.popup.step_link
+			.close_container
+			.popup_container
+				a(href="products.html")
+					img(src="img/lang_#{common[0].current_lang}/popup_1.png", alt="")
+		include include/footer.jade

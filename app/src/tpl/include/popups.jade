@@ -1,0 +1,92 @@
+#doctor.popup
+	.close_container
+	.popup_container
+		.close
+		.doctor_head
+			.logo_list
+				span.item_1
+				span.item_2
+				span.item_3
+			.doctor_image
+		.scroll_container
+			p #{common[0].popups[0].doctor[0]}
+			.doctor_sertificate
+				.bg
+				.text
+					h4 #{common[0].popups[0].doctor[1]}
+					p #{common[0].popups[0].doctor[2]}
+					br
+					p
+						small #{common[0].popups[0].doctor[3]}
+						| #{common[0].popups[0].doctor[4]}
+		.container_name
+			.name
+				strong #{common[0].site_name}
+				span #{common[0].site_desc}
+			a(href="#").close_btn #{common[0].close}
+#page_terms.popup
+	.close_container
+	.popup_container
+		.close
+		.title 
+			strong #{common[0].site_name}
+			| #{common[0].popups[0].terms[0]}
+		.scroll_container
+			p  #{common[0].popups[0].terms[1]}
+			h4  #{common[0].popups[0].terms[2]}
+			p  #{common[0].popups[0].terms[3]}
+			h4  #{common[0].popups[0].terms[4]}
+			p  #{common[0].popups[0].terms[5]}
+			p
+				strong  #{common[0].popups[0].terms[6]}
+			p  #{common[0].popups[0].terms[7]}
+			p  #{common[0].popups[0].terms[8]} <a href="mailto: #{common[0].popups[0].terms[9]}"> #{common[0].popups[0].terms[9]}</a>
+			p #{common[0].popups[0].terms[10]}
+				a.phone(href="tel:+#{common[0].popups[0].terms[11]}")
+					span #{common[0].popups[0].terms[12]}
+					| #{common[0].popups[0].terms[13]}
+		a(href="#").close_btn #{common[0].close}
+#page_privacy.popup
+	.close_container
+	.popup_container
+		.close
+		.title 
+			strong #{common[0].site_name}
+			| #{common[0].popups[0].privacy[0]}
+		.scroll_container
+			h4 #{common[0].popups[0].privacy[1]}
+			p #{common[0].popups[0].privacy[2]}
+			p #{common[0].popups[0].privacy[3]}
+			h4 #{common[0].popups[0].privacy[4]}
+			| #{common[0].popups[0].privacy[5]}
+			ul
+				li #{common[0].popups[0].privacy[6]}
+				li #{common[0].popups[0].privacy[7]}
+				li #{common[0].popups[0].privacy[8]}
+				li #{common[0].popups[0].privacy[9]}
+				li #{common[0].popups[0].privacy[10]}
+				li #{common[0].popups[0].privacy[11]}
+			p #{common[0].popups[0].privacy[12]}
+			p #{common[0].popups[0].privacy[13]}
+				a.phone(href="tel:+#{common[0].popups[0].privacy[14]}")
+					span #{common[0].popups[0].privacy[15]}
+					| #{common[0].popups[0].privacy[16]}
+		a(href="#").close_btn #{common[0].close}
+		contact
+#page_contact.popup
+	.close_container
+	.popup_container
+		.close
+		.title 
+			strong #{common[0].site_name}
+			|  #{common[0].popups[0].contact[0]}
+		.scroll_container
+			p  #{common[0].popups[0].contact[1]} <a href="mailto: #{common[0].popups[0].contact[2]}"> #{common[0].popups[0].contact[2]}</a>
+			p  #{common[0].popups[0].contact[3]}
+				a.phone(href="tel:+ #{common[0].popups[0].contact[4]}")
+					span #{common[0].popups[0].contact[5]}
+					|  #{common[0].popups[0].contact[6]}
+			p  #{common[0].popups[0].contact[7]}
+			br
+			p.regular  #{common[0].popups[0].contact[8]}
+		a(href="#").close_btn #{common[0].close}

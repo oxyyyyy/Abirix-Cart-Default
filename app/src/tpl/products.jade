@@ -1,0 +1,154 @@
+doctype html
+html(lang="#{common[0].current_lang}")
+	include include/head.jade
+	body(class="lang_#{common[0].current_lang} page_cart")
+		.product_container
+			.discount
+				.container
+					| <span>#{common[0].discount[0].discount_1[0]}</span> #{common[0].discount[0].discount_1[1]} <span class="icon icon_car">#{common[0].discount[0].discount_1[2]}</span> #{common[0].discount[0].discount_1[3]}
+			include include/top_line.jade
+			.products
+				.container
+					.row
+						.col-xs-4.costume_padding
+							.product_item(data-product-link="product_start.html")
+								.shadow
+									.image
+										.name 
+											| #{common[0].products[0].product_1[0]}
+											.product_image
+												img(src="img/common/product/product_start.png", alt="")
+										.avatar
+											img(src="img/common/product_avatar_1.png", alt="")
+									.product_info
+										.title 
+											strong #{common[0].products[0].product_1[1]} 
+											| #{common[0].products[0].product_1[2]}
+											small #{common[0].products[0].product_1[3]}
+										ul.list
+											li #{common[0].products[0].product_1[4]}
+											li #{common[0].products[0].product_1[5]}
+											li.icon_red 
+												span #{common[0].products[0].common[0]}
+								.price_container
+									.old_price
+										| #{common[0].products[0].common[1]} 
+										span #{common[0].products[0].product_1[6]}
+									.price
+										| #{common[0].products[0].product_1[7]}
+										span #{common[0].products[0].common[2]} <br> #{common[0].products[0].common[3]}
+									.select_container
+										.select
+											i #{common[0].products[0].common[4]}
+											span
+								.rating_container
+									.rating_flex
+										.name
+											| #{common[0].products[0].common[5]} 
+											.stars
+												span
+										.num_rating 2.5
+									.rating_by
+										| #{common[0].products[0].common[6]} 
+										span
+						.col-xs-4.costume_padding
+							.product_item.center.selected(data-product-link="product_pro.html")
+								.most_popular
+								.sense
+									.left_side
+										| #{common[0].products[0].common[7]}
+										span #{common[0].products[0].common[8]}
+									.right_side
+										| #{common[0].products[0].common[9]}
+								.shadow
+									.image
+										.name 
+											| #{common[0].products[0].product_2[0]}
+											.product_image
+												img(src="img/common/product/product_pro.png", alt="")
+										.avatar
+											img(src="img/common/product_avatar_2.png", alt="")
+									.product_info
+										.title 
+											strong #{common[0].products[0].product_2[1]}
+											| #{common[0].products[0].product_2[2]}
+											small #{common[0].products[0].product_2[3]}
+										ul.list
+											li #{common[0].products[0].product_2[4]}
+											li #{common[0].products[0].product_2[5]}
+											li.icon_red 
+												span #{common[0].products[0].common[0]}
+								.price_container
+									.old_price
+										| #{common[0].products[0].common[1]}  
+										span #{common[0].products[0].product_2[6]}
+									.price
+										| #{common[0].products[0].product_2[7]}
+										span #{common[0].products[0].common[2]} <br> #{common[0].products[0].common[3]}
+									.select_container
+										.select
+											i #{common[0].products[0].common[4]}
+											span
+								.rating_container
+									.rating_flex
+										.name
+											| #{common[0].products[0].common[5]} 
+											.stars.num_90
+												span
+										.num_rating 4.8
+									.rating_by
+										| #{common[0].products[0].common[6]} 
+										span
+						.col-xs-4.costume_padding
+							.product_item(data-product-link="product_age.html")
+								.shadow
+									.image
+										.name 
+											| #{common[0].products[0].product_3[0]}
+											.product_image
+												img(src="img/common/product/product_age.png", alt="")
+										.avatar
+											img(src="img/common/product_avatar_3.png", alt="")
+									.product_info
+										.title 
+											strong #{common[0].products[0].product_3[1]} 
+											| #{common[0].products[0].product_3[2]}
+											small #{common[0].products[0].product_3[3]}
+										ul.list
+											li #{common[0].products[0].product_3[4]}
+											li #{common[0].products[0].product_3[5]}
+											li.icon_red 
+												span #{common[0].products[0].common[0]}
+								.price_container
+									.old_price
+										| #{common[0].products[0].common[1]}  
+										span #{common[0].products[0].product_3[6]}
+									.price
+										| #{common[0].products[0].product_3[7]}
+										span #{common[0].products[0].common[2]} <br> #{common[0].products[0].common[3]}
+									.select_container
+										.select
+											i #{common[0].products[0].common[4]}
+											span
+								.rating_container
+									.rating_flex
+										.name
+											| #{common[0].products[0].common[5]} 
+											.stars.num_80
+												span
+										.num_rating 3.2
+									.rating_by
+										| #{common[0].products[0].common[6]} 
+										span
+			.container.button_container
+				a(href="product_pro.html").button.next
+					span 
+						| #{common[0].products[0].common[11]}
+						i #{common[0].products[0].common[12]}
+		include include/video.jade
+		#step_2.popup.step_link
+			.close_container
+			.popup_container
+				a(href="offer_1.html")
+					img(src="img/lang_#{common[0].current_lang}/popup_2.png", alt="")
+		include include/footer.jade

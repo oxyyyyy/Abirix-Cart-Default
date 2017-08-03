@@ -1,0 +1,59 @@
+doctype html
+html(lang="#{common[0].current_lang}")
+	include include/head.jade
+	body(class="lang_#{common[0].current_lang} page_cart")
+		.product_container.no_padding_bottom
+			include include/top_line.jade
+			.order_container
+				.container
+					include include/info_line.jade
+					.row
+						.col-sm-8.costume_padding.content_side
+							.title_container
+								a(href="products.html").go_back #{common[0].order_product_title[0]}
+								span  #{common[0].order_product_title[1]}
+							.product_card
+								.avatar
+									img(src="img/common/product_avatar_card_3.png", alt="")
+								.select
+									| #{common[0].order_products_common[0]}
+									span
+								.title
+									strong #{common[0].order_products[0].product_2[0]} 
+									| #{common[0].order_products[0].product_2[1]}
+									span #{common[0].order_products[0].product_2[2]}
+								.product_info
+									.left_side
+										.image
+											img(src="img/common/product/product_age_card.png", alt="")
+										.old_price #{common[0].order_products_common[1]} 
+											span #{common[0].order_products[0].product_2[3]}
+									.right_side
+										ul.list
+											li #{common[0].order_products[0].product_2[4]}
+											li #{common[0].order_products[0].product_2[5]}
+											li.icon_red 
+												span #{common[0].order_products_common[2]}
+										.price #{common[0].order_products[0].product_2[6]}
+											span #{common[0].order_products_common[3]} <br> #{common[0].order_products_common[4]}
+								.card_footer
+									.left_side
+										span #{common[0].order_products_common[5]}
+										| #{common[0].order_products_common[6]}
+									.right_side
+										.persons #{common[0].order_products_common[7]}
+							include include/refund.jade
+							include include/timer.jade
+							include include/garant.jade
+						.col-sm-4.costume_padding.sidebar_side
+							.title_container
+								span #{common[0].order_title[0]}
+								i #{common[0].order_title[1]}
+							include include/order_form.jade
+		include include/video.jade
+		#step_2.popup.step_link
+			.close_container
+			.popup_container
+				a(href="offer_1.html")
+					img(src="img/lang_#{common[0].current_lang}/popup_2.png", alt="")
+		include include/footer.jade
