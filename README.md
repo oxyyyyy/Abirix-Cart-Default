@@ -1,1 +1,23 @@
-Test text
+# Список плагинов для установки в Gulp
+
+- npm install --save-dev  gulp-rename
+- npm install --save-dev  gulp-data
+- npm install --save-dev  gulp-autoprefixer
+- npm install --save-dev  gulp-minify-css
+- npm install --save-dev  gulp-minify
+- npm install --save-dev  gulp-htmlhint
+- npm install --save-dev  gulp-clean
+- npm install --save-dev  gulp-concat
+- npm install --save-dev  gulp-util
+- npm install --save-dev  gulp-sass
+- npm install --save-dev  gulp-cache
+- npm install --save-dev  gulp-html-beautify
+- npm install --save-dev  gulp-sass-glob
+- npm install --save-dev  gulp-wait
+- npm install --save-dev  gulp-cssbeautify
+- npm install --save-dev  fs
+- npm install --save-dev  gulp.spritesmith
+- npm install --save-dev  gulp-css-format
+- npm install --save-dev  gulp-jade
+- npm install --save-dev  gulp-image-optimization
+- npm install --save-dev  gulp-connect
