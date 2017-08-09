@@ -1,0 +1,291 @@
+{
+	"landing": [{
+		"test": "Italian lorem text Italian lorem text Italian lorem text Italian lorem text Italian lorem text"
+	}],
+	"common": [{
+		"current_lang": "it",
+		"site_name": "XXX",
+		"site_desc": "Anti-wrinkle non-surgery innnovation",
+		"close": "Close",
+
+		"warning": "Attenzione! A causa di tutta l'attenzione dei media i nostri negozi stanno lottando per mantenere le scorte. A partire dal 31 marzo 2017, abbiamo una fornitura limitata di prodotti da spedire entro 24 ore.",
+		"footer": [
+			"Termini e condizioni",
+			"Politica di Privacy",
+			"Contattaci",
+			"Avvertimento",
+			"Le dichiarazioni fatte su siti web non sono state valutate dalla FDA (US Food & Drug Administration). Questo prodotto non è destinato a diagnosticare, curare o prevenire qualsiasi malattia. Le informazioni fornite da questo sito web o questa società non sono una sostituzione a una faccia a faccia con il medico e non dovrebbero essere costruite come singole consulenze mediche. Le testimonianze su questo sito web sono casi individuali e non garantiscono di ricevere gli stessi risultati.",
+			"Copyright © 2017 ",
+			"MAsterSPA, LLC ITN 104380285762 PRSN 427602692592"
+		],
+		"see_on_tv":[
+			"Come in TV:"
+		],
+		"products": [
+			{
+				"common":[
+					"Spedizione gratuita",
+					"prezzo al dettaglio:",
+					"a",
+					"bottiglia",
+					"Pacchetto selezionato",
+					"La tua pelle liscia e delicata",
+					"Valori verificati da",
+					"Assistenza",
+					"sanitaria femminile",
+					"“La scoperta più promettente nella cura del corpo!”",
+					"Spedizione gratuita",
+					"Vai al passo successivo",
+					"Informazioni sulla spedizione "
+				],
+				"product_1":[
+					"Rinnovamento delicato",
+					"Starter",
+					"Pacchetto",
+					"Leviga le piccole rughe",
+					"Prendi la tua scorta di 2 mesi",
+					"Anche le linee sottili si appianano per 8 mesi",
+					"C$49.95",
+					"€36.95"
+				],
+				"product_2":[
+					"Ripristino di gioventù",
+					"Pro Result ",
+					"Pacchetto",
+					"Protegge la tua pelle dall'invecchiamento",
+					"Prendi la tua scorta di 6 mesi",
+					"Evita l'ulteriore invecchiamento per 16 mesi",
+					"C$49.95",
+					"€29.95"
+				],
+				"product_3":[
+					"Di nuovo giovane",
+					"Age off",
+					"Pacchetto",
+					"Sbarazzati delle occhiaie",
+					"Prendi la tua scorta di 4 mesi",
+					"Elimina il gonfiore per 10 mesi",
+					"C$49.95",
+					"€32.95"
+				]
+			}
+		],
+		"discount":[
+			{
+				"discount_1": [
+					"Sconto speciale:",
+					"Risparmia fino al 40% +",
+					"Spedizione gratuita",
+					"con l’offerta di oggi!"
+				],
+				"discount_2": [
+					"Sconto istantaneo attivato:",
+					"Ricevi 2 bottiglie e la",
+					"spedizione gratuita",
+					"con il tuo ordine!"
+				],
+				"discount_3": [
+					"Lo sconto speciale attualizzato di oggi: ",
+					"Ricevie",
+					"1 bottiglia gratuita con il tuo ordine!"
+				]
+			}
+		],
+		"info_line": [
+			"Rimanente: ",
+			"7 pacchetti ",
+			"con sconto istantaneo + spedizione gratuita. Probabilita di vendere tutti i pacchetti: ",
+			"altissimo"
+		],
+		// TODO:
+		"popups": [
+			{
+				"doctor": [
+					"The International Medical Association approves the product we offer. It passed all the necessary clinical tests and was thoroughly studied by a commission of doctors.",
+					"Decision of the medical commission:",
+					"The remedy is completely natural, highly effective, harmless to people, and then without any restrictions can be used in the home as a basic or auxiliary mean.",
+					"The Head of Commission: ",
+					"Wesley M. doctor of the highest category, M.D."
+				],
+				"terms": [
+					"Terms and Conditions",
+					"This site is owned and operated by Pure Cambogia Ultra.",
+					"AGREEMENT",
+					"Pure Cambogia Ultra contains multiple Web pages operated by Pure Cambogia Ultra. This offer is available for you and is subject to the acceptance of the following terms and conditions. Your use of the Pure Cambogia Ultra site and related offers represents your consent to all such terms contained herein. Pure Cambogia Ultra reserves the right to change the terms in which this offer is being offered. Please check this page for any changes. Pure Cambogia Ultra seeks to ensure that all available information on the website is accurate and true, however there is no guarantee. These terms and conditions apply exclusively, although in contrast to the general or specific conditions or stipulations of the buyer. These conditions will remain in force during the sale and during the relevant activities relating to such sale.",
+					"BASIC TERMS OF THE AGREEMENT",
+					"The price of this product is the price set at the time of purchase and may change from time to time if it is used to complete a new purchase. In no event shall the purchase price of today guarantee a price for future purchases not related. The price does not include shipping and applicable operating costs that may be evaluated based on the amount of purchase.",
+					"* International fee of up to 15% may apply.",
+					"Single purchase: Thank you for your purchase, your shipment will be processed once we receive confirmation of payment. This purchase is subject to charge only through the method of payment. If you wish to receive new orders of Pure Cambogia Ultra it is necessary to submit a new order. The price of future purchases can not be guaranteed.",
+					"Live email support is available:",
+					"support@biotrimlabs.com",
+					"Or you may call us toll-free ",
+					"610280363151",
+					"AU",
+					"+61-(0)2 8036 3151"
+				],
+				"privacy": [
+					"privacy policy",
+					"The information we collect",
+					"We use the information we collect on our websites to provide a superior shopping experience and to communicate with you about products, services and promotions. We collect information about you when you register on our site, place an order, subscribe to our newsletter, respond to a survey, or fill out a form.",
+					"The following types of information about a user are among those that may be collected by us in relation to the site: name, postal address, e-mail address, telephone number, mobile phone number, payment information (such as card numbers credit and billing address if purchases or payments are made), date of birth, age, sex, other demographic information (such as occupation, income bracket), IP address, referring site, and other technical information collected by the site server.",
+					"Information",
+					"In connection with the web site, we may collect information in the following ways:",
+					"Through registration forms filled out by a user on the Site",
+					"Through the information provided by a user in connection with the purchase of products or services on the Site",
+					"Through the maintenance and analysis of Web server logs",
+					"Through calls and e-mail users",
+					"Through Internet chat sessions between a user and this site",
+					"Through the use of this site to third-party databases from which user information is extracted and combined with information obtained from this site by other means.",
+					"We can also connect to personally and non-personally identifiable information from users via \"cookies\" (small text files placed by this site on users' computers), GIF image files to single-pixel (also called \"Web beacons\"), the Web server log analysis and other similar technological means. This information can be used to track the trends of the site and improve the user experience, and may be shared with third parties.",
+					"To the extent that third parties may place advertisements on the Site, such third parties may use cookies or other technological means within the advertising to collect and use non-personally identifiable information. We are not responsible for information collected by ",
+					"610280363151",
+					"AU",
+					"+61-(0)2 8036 3151"
+				],
+				"contact": [
+					"contact us",
+					"Email Customer Service is available 24 hours a day at ",
+					"support@biotrimlabs.com",
+					"Toll-free Customer Service is available 5 days a week, from 9:00 to 17:00 (CET) at:",
+					"610280363151",
+					"AU",
+					"+61-(0)2 8036 3151",
+					"All returns must be sent to:",
+					"Attn: Returns Department PO Box 1201 Singapore, 918118, SG"
+				]
+			}
+		],
+		"video": [
+			"Storie vere. ",
+			"Risultati veri"
+		],
+		"timer": [
+			"Sei fortunato! ",
+			"Ordini al miglior prezzo sul mercato e risparmi il 60% rispetto ad altri negozi.",
+			"tempo rimanente per pagare:"
+		],
+		"order_products_common":[
+			"Pacchetto selezionato",
+			"prezzo al dettaglio:",
+			"Spedizione gratuita",
+			"a",
+			"bottiglia",
+			"inclusa",
+			"la garanzia di rimborso di 30 giorni",
+			"2 persone stanno ordinando questo pacchetto"
+		],
+		"order_products":[
+			{
+				"product_1": [
+					"Starter",
+					"Pacchetto",
+					"Leviga le piccole rughe",
+					"C$49.95",
+					"Prendi la tua scorta di 2 mesi",
+					"Anche le linee sottili si appianano per 8 mesi",
+					"€36.95"
+				],
+				"product_2": [
+					"Age Off",
+					"Pacchetto",
+					"Sbarazzati delle occhiaie",
+					"C$49.95",
+					"Prendi la tua scorta di 4 mesi",
+					"Elimina il gonfiore per 10 mesi",
+					"€32.95"
+				],
+				"product_3": [
+					"Pro Result",
+					"Pacchetto",
+					"Protegge la tua pelle dall'invecchiamento",
+					"C$49.95",
+					"Prendi la tua scorta di 6 mesi",
+					"Evita l'ulteriore invecchiamento per 16 mesi",
+					"€29.95"
+				]
+			}
+		],
+		"order_product_title":[
+			"Torna allo step 1",
+			"il tuo pacchetto riservato!"
+		],
+		"order_offer_title":[
+			"Riepilogo dell'Ordine"
+		],
+		"garant": [
+			"* Possono essere applicate tariffe internazionali fino al 15%",
+			"Siamo cosi fiduciosi ",
+			"che AWADERM funzionera per te che offriamo una garanzia di soddisfazione del 100%!"
+		],
+		"offer_1_list":[
+			{
+				"common":[
+					"prezzo al dettaglio:",
+					"a",
+					"bottiglia",
+					"Miglior prezzo!",
+					"Pacchetto selezionato"
+				],
+				"offer_1": [
+					"Compra 3 mesi di fornitura,",
+					"Ottieni 2 gratis!",
+					"Ordina ora per la",
+					"spedizione gratuita!",
+					"C$49.95",
+					"€32.95"
+				],
+				"offer_2": [
+					"Compra 2 mesi di fornitura, ",
+					"Ottieni 1 gratis!",
+					"Ordina ora per la",
+					"spedizione gratuita!",
+					"C$49.95",
+					"€36.95"
+				],
+				"offer_3": [
+					"Compra 1 mesi di fornitura",
+					"Ordina ora per la spedizione gratuita!",
+					"Inizia per il nostro",
+					"prezzo più basso mai!",
+					"€36.95"
+				]
+			}
+		],
+		"offer_2": [
+			"Compra il primo,",
+			"",
+			"per ottenerne 2 gratuitamente!",
+			"Non perdere la tua occasione",
+			"per amare il tuo corpo!",
+			"Riprendi la tua bellezza!",
+			"€49.95",
+			"totale",
+			"",
+			"Ottieni una bottiglia gratuita per iniziare oggi!"
+		],
+		"order_form": [
+			"Nome",
+			"Cognome",
+			"Indirizzo",
+			"Сitta",
+			"Provincia",
+			"Codice Postale",
+			"Telefono",
+			"Email",
+			"Payment Method",
+			"Scegli il Metodo di Pagamento",
+			"Card Number",
+			"Expiry Month",
+			"Expiry Year",
+			"Questa e Una Connessione Sicura 256-bit SSL",
+			"Spedisci il mio ordine",
+			"Ottieni la spedizione gratuita",
+			"100% Transazioni Sicure",
+			"Accettiamo:"
+		],
+		"order_title":[
+			"Step finale",
+			"Informazioni sul Pagamento"
+		]
+	}]
+}
